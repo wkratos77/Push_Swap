@@ -6,7 +6,7 @@
 #    By: wkrati <wkrati@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/10 02:14:41 by wkrati            #+#    #+#              #
-#    Updated: 2025/12/20 18:34:23 by wkrati           ###   ########.fr        #
+#    Updated: 2025/12/21 17:31:17 by wkrati           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,19 @@ SRCS = Algo/main.c \
 	   
 OBJS = $(SRCS:.c=.o)
 
-BONUS_SRC = 
+BONUS_SRC = bonus/checker.c \
+			bonus/apply_op.c \
+			bonus/ops_swap.c \
+			bonus/ops_push.c \
+			bonus/ops_rotate.c \
+			bonus/ops_rev_rotate.c \
+			bonus/get_next_line_bonus.c \
+			bonus/get_next_line_utils_bonus.c \
+			utils/stack_utils.c \
+			utils/parsing_utils.c \
+			utils/sort_utils.c \
+			utils/split_utils.c
+			
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 
