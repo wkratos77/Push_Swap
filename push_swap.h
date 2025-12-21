@@ -6,7 +6,7 @@
 /*   By: wkrati <wkrati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 03:03:46 by wkrati            #+#    #+#             */
-/*   Updated: 2025/12/18 21:41:15 by wkrati           ###   ########.fr       */
+/*   Updated: 2025/12/20 19:03:13 by wkrati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ typedef struct s_stack
 	int				index;
 	struct s_stack	*next;
 }					t_stack;
+
+typedef struct s_chunk
+{
+	int				low;
+	int				high;
+	int				n;
+}					t_chunk;
 
 t_stack				*stack_new(int nbr);
 void				stack_add_back(t_stack **stack, t_stack *new);

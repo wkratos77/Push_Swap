@@ -6,7 +6,7 @@
 #    By: wkrati <wkrati@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/10 02:14:41 by wkrati            #+#    #+#              #
-#    Updated: 2025/12/18 21:42:07 by wkrati           ###   ########.fr        #
+#    Updated: 2025/12/20 18:34:23 by wkrati           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRCS = Algo/main.c \
 	   utils/stack_utils.c \
 	   utils/index_utils.c \
 	   utils/parsing_utils.c \
-	   utils/sort_utils \
+	   utils/sort_utils.c \
 	   utils/split_utils.c
 	   
 OBJS = $(SRCS:.c=.o)
