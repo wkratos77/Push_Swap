@@ -6,7 +6,7 @@
 /*   By: wkrati <wkrati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 15:37:39 by wkrati            #+#    #+#             */
-/*   Updated: 2025/12/18 21:27:36 by wkrati           ###   ########.fr       */
+/*   Updated: 2025/12/20 22:21:26 by wkrati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,35 +21,35 @@ static int	chunk_size(int n)
 	return (n / 20);
 }
 
-static void	advance_window(int *state)
+static void	advance_chunk(t_chunk *w)
 {
-	if (state[0] < state[2] - 1)
-		state[0]++;
-	if (state[1] < state[2] - 1)
-		state[1]++;
+	if (w->low < w->n - 1)
+		w->low++;
+	if (w->high < w->n - 1)
+		w->high++;
 }
 
-static void	push_to_b(t_stack **a, t_stack **b, int *state)
+static void	push_to_b(t_stack **a, t_stack **b, t_chunk *w)
 {
 	pb(a, b);
-	if ((*b)->index <= state[0])
+	if ((*b)->index <= w->low)
 		rb(b);
-	advance_window(state);
+	advance_chunk(w);
 }
 
 static void	push_chunks(t_stack **a, t_stack **b, int n)
 {
-	int	state[3];
+	t_chunk	w;
 
-	state[0] = 0;
-	state[2] = n;
-	state[1] = chunk_size(n);
-	if (state[1] > n - 1)
-		state[1] = n - 1;
+	w.low = 0;
+	w.n = n;
+	w.high = chunk_size(n);
+	if (w.high >= n)
+		w.high = n - 1;
 	while (*a)
 	{
-		if ((*a)->index <= state[1])
-			push_to_b(a, b, state);
+		if ((*a)->index <= w.high)
+			push_to_b(a, b, &w);
 		else
 			ra(a);
 	}
