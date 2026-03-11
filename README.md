@@ -1,5 +1,5 @@
-*This project has been created as part of the 42 curriculum by <wkrati>.*
-
+### *This project has been created as part of the 42 curriculum by wkrati.*
+---
 # Push_Swap
 ---
 
