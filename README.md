@@ -1,6 +1,13 @@
-### *This project has been created as part of the 42 curriculum by wkrati.*
+*This project has been created as part of the 42 curriculum by wkrati.*
 ---
 # Push_Swap
+---
+## Quick Overview
+
+- **Built with:** C
+- **Focus:** Stack-based sorting, algorithms, and optimization under constraints.
+- **What I learned:** Problem solving, operation minimization, edge-case handling, and algorithmic thinking.
+
 ---
 
 ## Description
